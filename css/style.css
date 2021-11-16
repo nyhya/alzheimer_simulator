@@ -1,0 +1,860 @@
+#app {
+    position: fixed;
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+}
+
+/* common-popup */
+.common-popup-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  
+  .common-popup-wrap .close {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/btn_close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    z-index: 10;
+  }
+  
+  .common-popup-con {
+    position: relative;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    margin: 25px;
+  }
+  
+  .common-popup-con .popup {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  }
+  
+  .common-popup-con .popup .title-con {
+    width: calc(100% - 20px);
+    height: 44px;
+    display: table;
+    padding: 10px;
+    padding-left: 25px;
+    padding-top: 15px;
+  }
+  
+  .common-popup-con .popup .title-con .titles {
+    height: 100%;
+    display: table-cell;
+    vertical-align: bottom;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #231f20;
+    padding-bottom: 10px;
+    box-shadow: inset 0px -1px 0px 0px #878787;
+  }
+  .common-popup-con .popup .contents-con {
+    padding: 25px;
+    height: calc(100% - 70px - 50px - 20px );
+    overflow-y: auto;
+  }
+  .common-popup-wrap .contents-con .img {
+    max-width: 100%;
+  }
+
+/* header */
+#header-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: #fff;
+}
+
+.header-contain {
+    position: relative;
+}
+
+.header-contents {
+    width: 100%;
+    height: 50px;
+    background: url("../images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 102px auto;
+    box-shadow: inset 0px -1px 0px 0px #707070;
+}
+
+/* progress */
+#progress-wrap {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 60px;
+    margin-top: 50px;
+
+}
+
+#progress-wrap .progress-con {
+    position: absolute;
+    width: 100%;
+   
+    height: 100%;
+    background-color: #1977b2;
+    text-align: center;
+}
+
+#progress-wrap .progress-contents {
+    width: calc(100% - 50px);
+    height: 100%;
+    display: inline-block;
+    max-width: 320px;
+    max-height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px 25px;
+}
+
+#progress-wrap .progress-contents.step1 {
+    background-image: url(../images/2_progress_01.png);
+}
+#progress-wrap .progress-contents.step2 {
+    background-image: url(../images/2_progress_02.png);
+}
+#progress-wrap .progress-contents.step3 {
+    background-image: url(../images/2_progress_03.png);
+}
+#progress-wrap .progress-contents.step4 {
+    background-image: url(../images/2_progress_04.png);
+}
+#progress-wrap .progress-contents.step5 {
+    background-image: url(../images/2_progress_05.png);
+}
+#progress-wrap .progress-contents.step6 {
+    background-image: url(../images/2_progress_06.png);
+}
+#progress-wrap .progress-contents.step7 {
+    background-image: url(../images/2_progress_07.png);
+}
+#progress-wrap .progress-contents.step8 {
+    background-image: url(../images/2_progress_08.png);
+}
+#progress-wrap .progress-contents.step9 {
+    background-image: url(../images/2_progress_09.png);
+}
+#progress-wrap .progress-contents.step10 {
+    background-image: url(../images/2_progress_10.png);
+}
+
+/* Alzheimaer */
+#Alzheimaer-Quest-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+#Alzheimaer-Quest-wrap > .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #0069aa;
+    overflow-y: auto;
+}
+
+#Alzheimaer-Quest-wrap > .container .section-top {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 80.3125%;
+    background-color: #0069aa;
+    z-index: 10;
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants {
+    width: 100%;
+    height: calc(100% - 50px - 60px);
+    margin: 0px auto;
+    padding: 0px;
+    max-width: 360px;
+    min-width: 320px;
+    min-height: 465px; /* 아이폰 se 기준 적용 */
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-area {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: calc(100% - 50px);
+    height: calc(100% - 25px - 67px);
+    min-width: 270px; /* 아이폰 se 기준 */
+    transform: translate(-50%, 0px);
+    padding: 25px 25px 0px;
+    min-height: 395px;
+    z-index: 5;
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .illust {
+    width: 100%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 100;
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img1 {
+    background-image: url(../images/2_img01.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img2 {
+    background-image: url(../images/2_img02.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img3 {
+    background-image: url(../images/2_img03.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img4 {
+    background-image: url(../images/2_img04.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img5 {
+    background-image: url(../images/2_img05.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img6 {
+    background-image: url(../images/2_img06.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img7 {
+    background-image: url(../images/2_img07.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img8 {
+    background-image: url(../images/2_img08.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img9 {
+    background-image: url(../images/2_img09.png);
+}
+#Alzheimaer-Quest-wrap > .container > .contants .illust.img10 {
+    background-image: url(../images/2_img10.png);
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-box {
+    position: relative;
+    width: calc(100% - 26px);
+    height: 40%;
+    max-height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-box .txt {
+    position: relative;
+    font-size: 1.8rem;
+    color: #58595b;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+    line-height: 2.2rem;
+}
+
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-box .space {
+    height: 100%;
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-box .btn-wrap {
+    position: relative;
+    width: 100%;
+
+}
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-box .btn-wrap .btn {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/ico-btn-uncheck.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 10px center;
+    background-color: #e5f6fb;
+    color: #58595b;
+}
+
+
+#Alzheimaer-Quest-wrap > .container > .contants .quest-box .btn-wrap .btn:last-child{
+    margin-top: 10px;
+}
+
+#Alzheimaer-Quest-wrap
+> .container
+> .contants
+.quest-box
+.btn-wrap
+.btn.on {
+    background-image: url(../images/ico-btn-check.png);
+    background-color: #00aae0;
+    color: #fff;
+}
+
+/* #Alzheimaer-Quest-wrap
+> .container
+> .contants
+.quest-box
+.btn-wrap
+.btn {
+    
+    margin-top: 10px;
+    
+} */
+
+#Alzheimaer-Quest-wrap > .container .progress-btns {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    display: table;
+    z-index: 5;
+}
+
+#Alzheimaer-Quest-wrap > .container .progress-btns .pre-btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px #cad2d4 solid;
+    color: #878787;
+    font-size: 1.5rem;
+    display: table-cell;
+    vertical-align: middle;
+    background-image: url(../images/ico-pre-btn.png);
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-align: center;
+    font-weight: 400;
+}
+
+#Alzheimaer-Quest-wrap > .container .bg-color {
+    position: absolute;
+    bottom: 0;
+    left: -1000px;
+    width: 10000px;
+    height: 40%;
+    background-color: #fff;
+}
+
+/* index.html */
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contants {
+    position: relative;
+    width: calc(100% - 50px);
+    height: calc(100% - 36px - 50px);
+    padding: 36px 25px 0px;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contants .title {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 130%;
+}
+
+.contants .title .title-popup-btn {
+    position: absolute;
+    right: -7px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/btn_01.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
+
+.contants > .sub-desc {
+    font-size: 1.4rem;
+    color: #58595b;
+    letter-spacing: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.8rem;
+
+    background-image: url(../images/1_img01.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+
+
+
+.contants .contants-box {
+    position: relative;
+    width: 100%;
+    height: 46%;
+    max-height: 221px;
+    min-height: 145px; /* 아이폰 se에서 이상적인 그래프 크기 */
+}
+
+.contants .contants-box .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    /* min-height: 135px; */
+    background-image: url(../images/1_grape.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 90%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(68, 49, 49, 0.16);
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 100;
+}
+
+.contants .contants-box .content .title-txt {
+    color: #58595b;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 300;
+}
+
+.contants .contants-box .content .sub-desc {
+    color: #878787;
+    font-size: 1rem;
+    margin-top: 2px;
+    font-weight: 100;
+    line-height: 1rem;
+}
+
+.contants .contants-box .bg-color {
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    width: calc(100% + 50px);
+    height: 50%;
+    background-color: #0069aa;
+}
+
+.sectionB {
+    width: 100%;
+    height: calc(50% + 1px);
+    background-color: #0069aa;
+    padding: 18px 25px;
+    margin-left: -25px;
+    margin-top: -1px;
+    font-weight: 100;
+}
+
+.sectionB .sub-txt {
+    color: #fff;
+    font-size: 1.4rem;
+    /* letter-spacing: -1.3px; */
+    font-weight: 100;
+}
+
+.sectionB .sub-txt .bold{
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+}
+
+
+.sectionB .btn {
+    position: relative;
+    width: 100%;
+    height: 74px;
+    background-color: #b1ecff;
+    border-radius: 5px;
+    margin-top: 12px;
+    box-shadow: 0px 1px 10px 0px rgba(16, 47, 78, 0.3);
+
+    background-image: url(../images/1_img02-right.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 95% bottom;
+}
+
+.sectionB .btn .btn-con {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/1_img02-left.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 15px bottom;
+}
+
+.sectionB .btn .btn-con .btn-titles {
+    color: #231f20;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    line-height: 100%;
+}
+
+.sectionB .btn .btn-con .btn-start {
+    height: 32px;
+    width: 84px;
+    color: #0069aa;
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    line-height: 100%;
+
+    background-image: url(../images/1_btn_arrow.png);
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-position: right 66%;
+}
+
+.overY {
+    overflow-y:auto ;
+}
+/* test.html */
+#alzheimer-wrap {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+}
+
+#alzheimer-wrap .alzheimer-con {
+    width: 100%;
+    height: 100%;
+}
+
+/* result */
+#result-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+#result-wrap .result-cotain {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+
+#result-wrap .result-cotain .result-contants {
+    padding-bottom: 30px;
+    background-color: #0069aa;
+    background-image: url(../images/result-bg.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: left top;
+    padding: 0px 25px 30px 25px;
+}
+
+#result-wrap .result-cotain .result-contants .title {
+    color: #fff;
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+    font-weight: 500;
+    padding-top: 33px;
+    line-height: 2.7rem;
+}
+
+#result-wrap .result-cotain .result-contants > .sub-desc {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 100;
+    line-height: 1.8rem;
+}
+
+#result-wrap .result-cotain .result-contants .alzheimer-condition {
+    position: relative;
+    width: calc(100% - 30px);
+    min-height: calc(71px - 30px);
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 23px;
+    padding: 12px 15px;
+}
+
+#result-wrap .result-cotain .result-contants .alzheimer-condition .img {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    width: 100%;
+    height: 80px;
+
+    background-image: url(../images/img-result.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#result-wrap .result-cotain .result-contants .alzheimer-condition .txt {
+    min-height: 20px;
+    display: table;
+    font-size: 1.5rem;
+    color: #0069aa;
+    letter-spacing: -1px;
+}
+
+#result-wrap .result-cotain .result-contants .alzheimer-condition .txt .score {
+    width: 34px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f5f6f7;
+    border-radius: 5px;
+    margin: 0px 5px;
+    color: #f8981d;
+    text-align: center;
+}
+
+#result-wrap .result-cotain .result-contants > .alzheimer_result-desc {
+    width: calc( 100% - 20px) ;
+    /* min-height: 45px; */
+    background-color: #f5f6f7;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* text-align: center; */
+    color: #878787;
+    line-height: 1.4rem;
+    padding: 10px;
+    font-weight: 100;
+}
+
+#result-wrap .result-cotain .result-contants > .alzheimer_related {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#result-wrap .result-cotain .result-contants > .alzheimer_related .between-con {
+    display: flex;
+}
+
+#result-wrap
+.result-cotain
+.result-contants
+> .alzheimer_related
+.between-con
+.between {
+    position: relative;
+    flex: 1 0 auto;
+    height: 78px;
+    background-color: #e5f6fb;
+    border-radius: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#result-wrap
+.result-cotain
+.result-contants
+> .alzheimer_related
+.between-con
+.between.alzheimer {
+    background-image: url(../images/info-btn01.png);
+    margin-right: 10px;
+}
+
+#result-wrap
+.result-cotain
+.result-contants
+> .alzheimer_related
+.between-con
+.between.alzheimer .txt{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/btn-txt01.png);
+    background-size: 100px auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+
+}
+
+#result-wrap
+.result-cotain
+.result-contants
+> .alzheimer_related
+.between-con
+.between.cdr {
+    background-image: url(../images/info-btn02.png);
+}
+
+#result-wrap
+.result-cotain
+.result-contants
+> .alzheimer_related
+.between-con
+.between.cdr .txt{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/btn-txt02.png);
+  background-size: 100px auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+}
+
+#result-wrap .result-cotain .result-contants > .alzheimer_related .url-copy {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #00aae0;
+    padding-left:10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: -0.1px;
+    font-weight: 100;
+
+    background-image: url(../images/ico-url.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 95% center;
+
+
+
+
+}
+
+#result-wrap .result-cotain .result-contants > .title-desc {
+    color: #fff;
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+    line-height: 2.8rem;
+    margin-top: 28px;
+    font-weight: 400;
+}
+
+#result-wrap .result-cotain .result-contants > .title-sub-desc {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.2px;
+    /* line-height: 2.8rem; */
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+#result-wrap .result-cotain .result-contants > .phone {
+    height: calc(74px - 20px);
+    background-color: #b1ecff;
+    border-radius: 5px;
+    margin-top: 13px;
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    padding: 10px 12px;
+    padding-top: 15px;
+    line-height: 2rem;
+
+    background-image: url(../images/phone-number.png);
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+#result-wrap .result-cotain .result-contants > .bottom-btns {
+    display: flex;
+    margin-top: 25px;
+}
+
+#result-wrap .result-cotain .result-contants > .bottom-btns .btn {
+    flex: 1 0 48.1481481%;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 5px;
+    min-width: 130px;
+    color: #878787;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+
+    background-repeat: no-repeat;
+    background-position: 15px center;
+}
+
+#result-wrap .result-cotain .result-contants > .bottom-btns .btn-pre {
+    margin-right: 10px;
+    background-image: url(../images/ico-pre-btn.png);
+    background-size: 8px 14px;
+}
+
+#result-wrap .result-cotain .result-contants > .bottom-btns .btn-next {
+    background-image: url(../images/ico-arrow-repeat.png);
+    background-size: contain;
+    background-size: 13px 11px;
+}
+
+/* main popup */
+.popup.main .title-txt {
+    color: #0069aa;
+    font-size: 1.2rem;
+    padding-top: 15px;
+}
+
+.popup.main .content-txt {
+    color: #58595b;
+    font-size: 1.3rem;
+    padding-top: 3px;
+    font-weight: 200;
+}
+
+/* alert */
+.alert-container {position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: flex;align-items: center;justify-content: center;}
+.alert-container .alert-content {position: relative;width: 80%;max-width: 300px;/* height: 150px; */background-color: #FFF;border-radius: 7px;overflow: hidden;padding: 25px 20px 15px;}
+.alert-container .alert-title {font-size: 18px;font-weight: 300;box-shadow: inset 0px -1px 0px 0px #878787;padding-bottom: 5px;}
+.alert-container .alert-text {display: flex;align-items: center;height: 60px;font-size: 15px;font-weight: 100;}
+.alert-container .alert-btn {height: 42px;box-shadow: inset 0px 0px 0px 1px #CAD2D4;border-radius: 7px;display: flex;align-items: center;justify-content: center;font-size: 15px;color: #878787;}

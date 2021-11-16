@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <title>치매진단 모바일 시뮬레이터</title>
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/vuex.js"></script>
+  <script src="./js/clipboard.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="wrap">
+      <div class="container">
+
+        <top-header></top-header>
+
+        <div class="contants overY">
+          <div class="title">
+            나는
+            <span class="sky">치매</span>에
+            <br />자유로울 수 있을까?
+            <div class="title-popup-btn" @click="onClickMainPopupShow"></div>
+          </div>
+          <div class="sub-desc">
+            대한민국 치매환자 수는
+            <br />매년 증가하고 있으며 어쩌면 몇 년 뒤,
+            <br />내 이야기가 될 수도 있습니다.
+            <br />
+          </div>
+          <div class="contants-box">
+            <div class="content">
+              <div class="title-txt">65세 이상 치매환자수 추이</div>
+              <div class="sub-desc">※출처 : 중앙치매센터, 2018</div>
+            </div>
+            <div class="bg-color"></div>
+          </div>
+          <div class="sectionB">
+            <div class="sub-txt">
+              잠깐의 시간 투자로,
+              <br /> <span class="bold">인지 능력 감퇴 판별을 위한 질문 검사법</span>을 통해
+              <br /> <span class="bold">자가 치매 진단</span>을 해보세요!
+              <br />
+            </div>
+            <!-- sub-txt -->
+            <div class="btn">
+              <div class="btn-con" @click="onClickStart">
+                <!-- <div class="btn-titles"></div> -->
+                <!-- <div class="btn-start"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- POPUP 시작 -->
+      <div class="common-popup-wrap" v-if="showMainPopup">
+        <div class="common-popup-con">
+          <div class="close" @click="onClickMainPopupClose"></div>
+          <div class="popup main">
+            <div class="title-con">
+              <div class="titles">출처</div>
+            </div>
+            <div class="contents-con">
+              <!-- 내용 시작 -->
+              <div class="title-txt">논문명</div>
+              <div class="content-txt">
+                [Development of the Subjective
+                Memory Complaints Questionnaire] (주관적
+                인지 능력 감퇴증 설문)
+              </div>
+              <div class="title-txt">저자명</div>
+              <div class="content-txt">
+                Jong Chul Youn (윤종철), Ki Woong Kim (김기웅), Dong Young Lee (이동영), Jin Hyeong Jhoo (주진형), Seok Bum Lee
+                (이석범), Joon Hyuk Park (박준혁), Eun Ae Choi (최은애), Jin Yeong Choe (최진영), Ji Woon Jeong (정지운), Il Han Choo
+                (추일한), Jong Inn Woo(우종인)
+              </div>
+              <div class="title-txt">잡지명</div>
+              <div class="content-txt">DEMENTIA AND GERIATRIC COGNITIVE
+                <br> DISORDERS (치매와 노인인지장애)</div>
+              <div class="title-txt">발행년도</div>
+              <div class="content-txt">2009</div>
+              <!-- 내용 끝 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- POPUP 끝 -->
+
+    </div>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

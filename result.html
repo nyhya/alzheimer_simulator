@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <title>치매진단 모바일 시뮬레이터</title>
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/vuex.js"></script>
+  <script src="./js/clipboard.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="result-wrap">
+      <top-header></top-header>
+      <div class="result-cotain">
+        <div class="result-contants">
+          <div class="title">
+            고객님의
+            <br />치매 진단 검사 결과는?
+          </div>
+          <!-- title -->
+          <div class="sub-desc">
+            정확한 치매검진은
+            <br />가까운 보건소나 치매지원센터를
+            <br />방문하여 받아보세요.
+          </div>
+          <!-- alzheimer-condition -->
+          <div class="alzheimer-condition">
+            <div class="img"></div>
+            <div class="txt">
+              총
+              <div class="score">{{trueCount}}</div>점으로
+            </div>
+            <div class="txt">
+              인지 능력 감퇴가
+              <div class="score">{{resultText}}</div>상태입니다.
+            </div>
+          </div>
+          <!-- alzheimer-condition -->
+          <div class="alzheimer_result-desc">
+            ※ 총점이 5점 이상이면 치매에 대한 진단평가를 받아볼
+            <br />필요가 있는 인지 능력 감퇴가 있다고 판정합니다.
+          </div>
+          <!-- alzheimer-condition -->
+          <div class="alzheimer_related">
+            <!-- between-con -->
+            <div class="between-con">
+              <div class="between alzheimer" @click="onClickResultPopup01Show">
+                <div class="txt"></div>
+              </div>
+              <div class="between cdr" @click="onClickResultPopup02Show">
+                <div class="txt"></div>
+              </div>
+            </div>
+            <!-- between-con -->
+            <div class="url-copy" @click="onClickUrlCopy" :data-clipboard-text="copyURL">치매진단 테스트 URL 복사</div>
+          </div>
+          <!-- alzheimer-condition -->
+          <div class="title-desc">
+            나와 가족,
+            <br />모두를 힘들게 하는 치매
+          </div>
+          <!-- title-sub-desc -->
+          <div class="title-sub-desc">
+            이제 치매는 선택이 아닌
+            <br />필수로 준비하는 질병이 되었습니다.
+            <br />만약의 상황이 찾아와도 부담이 낮도록
+            <br />라이나생명이 도와드리겠습니다.
+            {{ isShowPopup }}
+          </div>
+          <!-- title-sub-desc -->
+          <div class="phone" @click="onClickCall"></div>
+          <!-- bottom-btns -->
+          <div class="bottom-btns">
+            <div class="btn btn-pre" @click="onClickResultBack">이전</div>
+            <div class="btn btn-next" @click="onClickGotoHome">처음으로</div>
+          </div>
+          <!-- bottom-btns -->
+        </div>
+      </div>
+    </div>
+
+    <!-- POPUP 시작 -->
+    <div class="common-popup-wrap" v-if="showResultPopup01">
+      <div class="common-popup-con">
+        <div class="close" @click="onClickResultPopup01Close"></div>
+        <div class="popup main">
+          <div class="title-con">
+            <div class="titles">한눈에 보는 치매 정보!</div>
+          </div>
+          <div class="contents-con">
+            <!-- 내용 시작 -->
+            <img src="./images/popup.jpg" class="img">
+            <!-- 내용 끝 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- POPUP 끝 -->
+
+    <!-- POPUP 시작 -->
+    <div class="common-popup-wrap" v-if="showResultPopup02">
+      <div class="common-popup-con">
+        <div class="close" @click="onClickResultPopup02Close"></div>
+        <div class="popup main">
+          <div class="title-con">
+            <div class="titles">일상에서 보는 CDR척도</div>
+          </div>
+          <div class="contents-con">
+            <!-- 내용 시작 -->
+            <img src="./images/popup02.jpg" class="img">
+            <!-- 내용 끝 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- POPUP 끝 -->
+
+    <div class="alert-container" v-if="showResultAlert">
+      <div class="alert-content">
+        <div class="alert-title">알림</div>
+        <div class="alert-text">URL이 복사되었습니다.</div>
+        <div class="alert-btn" @click="onClickCloseAlert">확인</div>
+      </div>
+    </div>
+
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
